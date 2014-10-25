@@ -34,23 +34,83 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsR-z8-vPV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wsR-z8-vPV" secondAttribute="height" multiplier="80:11" id="k0J-SL-awm"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="k0J-SL-awm"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="k0J-SL-awm"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqB-vv-Eep">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hqB-vv-Eep" secondAttribute="height" multiplier="80:11" id="iKk-LE-TFf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="iKk-LE-TFf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="iKk-LE-TFf"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wsR-z8-vPV" secondAttribute="trailing" id="OeX-i2-uQX"/>
                             <constraint firstAttribute="trailing" secondItem="JP5-Bq-q8z" secondAttribute="trailing" id="WWe-t7-sjz"/>
+                            <constraint firstItem="wsR-z8-vPV" firstAttribute="top" secondItem="hqB-vv-Eep" secondAttribute="bottom" id="Yxh-j8-C88"/>
+                            <constraint firstAttribute="trailing" secondItem="hqB-vv-Eep" secondAttribute="trailing" id="eJT-x0-Ozo"/>
                             <constraint firstItem="9uP-SW-Zq2" firstAttribute="top" secondItem="JP5-Bq-q8z" secondAttribute="bottom" id="eQK-PK-Tfs"/>
+                            <constraint firstItem="JP5-Bq-q8z" firstAttribute="top" secondItem="wsR-z8-vPV" secondAttribute="bottom" id="o6h-Xy-d0H"/>
+                            <constraint firstItem="hqB-vv-Eep" firstAttribute="leading" secondItem="ot1-rv-C4A" secondAttribute="leading" id="pyt-Wn-rkL"/>
                             <constraint firstItem="JP5-Bq-q8z" firstAttribute="leading" secondItem="ot1-rv-C4A" secondAttribute="leading" id="rgP-vO-5Lz"/>
+                            <constraint firstItem="wsR-z8-vPV" firstAttribute="leading" secondItem="ot1-rv-C4A" secondAttribute="leading" id="tmj-EX-5yD"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wsR-z8-vPV"/>
+                                <exclude reference="hqB-vv-Eep"/>
+                            </mask>
                             <mask key="constraints">
+                                <exclude reference="eJT-x0-Ozo"/>
+                                <exclude reference="pyt-Wn-rkL"/>
+                                <exclude reference="OeX-i2-uQX"/>
+                                <exclude reference="Yxh-j8-C88"/>
+                                <exclude reference="tmj-EX-5yD"/>
                                 <exclude reference="WWe-t7-sjz"/>
+                                <exclude reference="o6h-Xy-d0H"/>
                                 <exclude reference="rgP-vO-5Lz"/>
                                 <exclude reference="eQK-PK-Tfs"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="wsR-z8-vPV"/>
+                                <include reference="hqB-vv-Eep"/>
+                            </mask>
                             <mask key="constraints">
+                                <include reference="eJT-x0-Ozo"/>
+                                <include reference="pyt-Wn-rkL"/>
+                                <include reference="OeX-i2-uQX"/>
+                                <include reference="Yxh-j8-C88"/>
+                                <include reference="tmj-EX-5yD"/>
                                 <include reference="WWe-t7-sjz"/>
+                                <include reference="o6h-Xy-d0H"/>
                                 <include reference="rgP-vO-5Lz"/>
                                 <include reference="eQK-PK-Tfs"/>
                             </mask>
