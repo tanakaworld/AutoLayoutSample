@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,32 +14,52 @@
                         <viewControllerLayoutGuide type="bottom" id="9uP-SW-Zq2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ot1-rv-C4A">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4D-uT-t0v">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JP5-Bq-q8z">
+                                <rect key="frame" x="62" y="230" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="37" y="508" width="327" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JP5-Bq-q8z" secondAttribute="height" multiplier="80:11" id="vqV-wk-o98"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vqV-wk-o98"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="vqV-wk-o98"/>
+                                    </mask>
                                 </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JP5-Bq-q8z" secondAttribute="trailing" id="WWe-t7-sjz"/>
+                            <constraint firstItem="9uP-SW-Zq2" firstAttribute="top" secondItem="JP5-Bq-q8z" secondAttribute="bottom" id="eQK-PK-Tfs"/>
+                            <constraint firstItem="JP5-Bq-q8z" firstAttribute="leading" secondItem="ot1-rv-C4A" secondAttribute="leading" id="rgP-vO-5Lz"/>
+                        </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="a4D-uT-t0v"/>
+                            <mask key="constraints">
+                                <exclude reference="WWe-t7-sjz"/>
+                                <exclude reference="rgP-vO-5Lz"/>
+                                <exclude reference="eQK-PK-Tfs"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="a4D-uT-t0v"/>
+                            <mask key="constraints">
+                                <include reference="WWe-t7-sjz"/>
+                                <include reference="rgP-vO-5Lz"/>
+                                <include reference="eQK-PK-Tfs"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="322.5" y="512"/>
         </scene>
     </scenes>
 </document>
